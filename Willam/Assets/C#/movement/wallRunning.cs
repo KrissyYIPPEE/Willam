@@ -48,7 +48,6 @@ public class wallRunning : MonoBehaviour
 
 
 
-    float currentWallID = 0;
 
     private void Start()
     {
@@ -61,10 +60,6 @@ public class wallRunning : MonoBehaviour
     {
         CheckForWall();
         StateMachine();
-        if (pm.grounded)
-        {
-            currentWallID = 0;
-        }
     }
 
     private void FixedUpdate()
