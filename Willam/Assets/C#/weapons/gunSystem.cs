@@ -16,7 +16,7 @@ public class gunSystem : MonoBehaviour
     //references
     public Camera fpsCam;
     public Transform attackPoint;
-    //public RaycastHit rayHit;
+    public RaycastHit rayHit;
     public LayerMask whatIsEnemy;
 
     //graphics
@@ -79,8 +79,9 @@ public class gunSystem : MonoBehaviour
         camShake.Shake(camShakeDuration, camShakeMagnitude);
 
         //graphics 
-        Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));  
+        Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
         Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
+
 
         bulletsLeft--;
         bulletsShot--;

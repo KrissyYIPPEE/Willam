@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,7 +25,12 @@ public class AllHealth : MonoBehaviour
 
     void Die()
     {
-        //if(CompareTag("Enemy"))
-            
+        if (CompareTag("Enemy"))
+            Destroy(gameObject);
+    }
+
+    internal void TakeDamage(object damage)
+    {
+        throw new NotImplementedException();
     }
 }

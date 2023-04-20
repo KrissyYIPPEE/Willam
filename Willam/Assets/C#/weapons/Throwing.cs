@@ -8,9 +8,11 @@ public class Throwing : MonoBehaviour
     public Transform cam;
     public Transform attackPoint;
     public GameObject objectThrowing;
+    public LayerMask whatIsEnemy;
+    RaycastHit rayHit;
 
     [Header("Settings")]
-    public int totalThrows;
+    public int totalThrows = 1;
     public float throwCooldown;
 
     [Header("Throwing")]
@@ -66,6 +68,7 @@ public class Throwing : MonoBehaviour
 
     private void ResetThrow()
     {
+        totalThrows = 1;
         readyToThrow = true;
     }
 }
