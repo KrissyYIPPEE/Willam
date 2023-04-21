@@ -42,8 +42,8 @@ public class wallRunning : MonoBehaviour
 
     [Header("References")]
     public Transform orientation;
-    public movement cam;
-    private PLAYERmove pm;
+    public CameraMovement cam;
+    private PlayerMovement pm;
     private Rigidbody rb;
 
 
@@ -52,7 +52,7 @@ public class wallRunning : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        pm = GetComponent<PLAYERmove>();
+        pm = GetComponent<PlayerMovement>();
 
     }
 

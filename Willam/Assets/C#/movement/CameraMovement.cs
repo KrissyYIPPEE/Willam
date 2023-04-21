@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class movement : MonoBehaviour
+public class CameraMovement : MonoBehaviour
 {
     //sensitivity and rotation
     public float sensX;

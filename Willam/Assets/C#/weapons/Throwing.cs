@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Throwing : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Throwing : MonoBehaviour
     public GameObject objectThrowing;
     public LayerMask whatIsEnemy;
     RaycastHit rayHit;
+    public TextMeshProUGUI text;
 
     [Header("Settings")]
     public int totalThrows = 1;
@@ -33,6 +35,9 @@ public class Throwing : MonoBehaviour
         {
             Throw();
         }
+
+        //setText
+        text.SetText("" + totalThrows);
     }
 
     private void Throw()
@@ -48,11 +53,11 @@ public class Throwing : MonoBehaviour
         //calculating direction
         Vector3 forceDirection = cam.transform.forward;
 
-        RaycastHit hit;
-
-        if(Physics.Raycast(cam.position, cam.forward, out hit, 500f))
+        if(Physics.Raycast(cam.position, cam.forward, out rayHit, 500f))
         {
-            forceDirection = (hit.point - attackPoint.position).normalized;
+            forceDirection = (rayHit.point - attackPoint.position).normalized;
+            if (rayHit.collider.CompareTag("Enemy"))
+                rayHit.collider.GetComponent<AllHealth>().TakeDamage(10);
         }
 
         //adding force

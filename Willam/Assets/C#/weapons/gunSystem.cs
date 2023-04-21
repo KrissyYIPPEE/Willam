@@ -69,8 +69,6 @@ public class gunSystem : MonoBehaviour
         //Raycast
         if (Physics.Raycast(fpsCam.transform.position, direction, out RaycastHit rayHit, range, whatIsEnemy))
         {
-            Debug.Log("gun hit: " + rayHit.collider.name);
-
             if (rayHit.collider.CompareTag("Enemy"))
                 rayHit.collider.GetComponent<AllHealth>().TakeDamage(damage);
         }
@@ -79,7 +77,7 @@ public class gunSystem : MonoBehaviour
         camShake.Shake(camShakeDuration, camShakeMagnitude);
 
         //graphics 
-        Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
+        Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.identity);
         Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
 
 
