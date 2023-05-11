@@ -50,7 +50,8 @@ public class PlayerMovement : MonoBehaviour
         sprinting,
         wallrunning,
         dashing,
-        air
+        air,
+        nul
     }
 
     public bool dashing;
@@ -75,9 +76,13 @@ public class PlayerMovement : MonoBehaviour
 
         //applying drag
         if (state == MovementState.walking || state == MovementState.sprinting)
+        {
             rb.drag = groundDrag;
+        }
         else
+        {
             rb.drag = 0;
+        }
     }
 
     private void FixedUpdate()

@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &279573050 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4516790798739477988, guid: 0e38b4ec0cf718541a925b08aa94b62d, type: 3}
-  m_PrefabInstance: {fileID: 1445648251}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1026401631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -298,22 +293,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: dea97011e5e86114aad9b5c41bc0f221, type: 3}
---- !u!114 &1431415705 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4516790796936541570, guid: 0e38b4ec0cf718541a925b08aa94b62d, type: 3}
-  m_PrefabInstance: {fileID: 1445648251}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a03e51a3974602840970ec2a8cc2df2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1431415706 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4516790796936541571, guid: 0e38b4ec0cf718541a925b08aa94b62d, type: 3}
-  m_PrefabInstance: {fileID: 1445648251}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1445648251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -322,10 +301,18 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2268841436355819322, guid: 0e38b4ec0cf718541a925b08aa94b62d, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4516790798444010977, guid: 0e38b4ec0cf718541a925b08aa94b62d, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4516790798444010987, guid: 0e38b4ec0cf718541a925b08aa94b62d, type: 3}
+      propertyPath: footstepSound
+      value: 
+      objectReference: {fileID: 1445648253}
     - target: {fileID: 4516790798444010989, guid: 0e38b4ec0cf718541a925b08aa94b62d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -373,38 +360,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e38b4ec0cf718541a925b08aa94b62d, type: 3}
---- !u!1 &1445648252 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4516790798444010977, guid: 0e38b4ec0cf718541a925b08aa94b62d, type: 3}
+--- !u!82 &1445648253 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2268841436355819322, guid: 0e38b4ec0cf718541a925b08aa94b62d, type: 3}
   m_PrefabInstance: {fileID: 1445648251}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1445648253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1445648252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96ff190e6b49a854b9adb25696a8420a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orientation: {fileID: 279573050}
-  playerCam: {fileID: 1431415706}
-  dashForce: 20
-  dashUpwardForce: 0
-  maxDashYSpeed: 0
-  dashDuration: 1
-  cam: {fileID: 1431415705}
-  dashFov: 70
-  useCameraForward: 1
-  allowAllDirections: 1
-  disableGravity: 0
-  resetVel: 1
-  dashCd: 1
-  dashCdTimer: 1
-  dashKey: 101
 --- !u!1 &1957571485
 GameObject:
   m_ObjectHideFlags: 0
