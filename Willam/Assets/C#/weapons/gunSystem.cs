@@ -20,7 +20,6 @@ public class gunSystem : MonoBehaviour
     public LayerMask whatIsEnemy;
 
     //graphics
-    public GameObject muzzleFlash, bulletHoleGraphic;
     public CameraShake camShake;
     public float camShakeMagnitude, camShakeDuration;
     public TextMeshProUGUI text;
@@ -58,6 +57,9 @@ public class gunSystem : MonoBehaviour
     {
         readyToShoot = false;
 
+        //Audio
+        FindObjectOfType<AudioManager>().Play("GunShot");
+
         //spread
         float x = Random.Range(-spread, spread);
         float y = Random.Range(-spread, spread);
@@ -75,11 +77,6 @@ public class gunSystem : MonoBehaviour
 
         //shakecam
         camShake.Shake(camShakeDuration, camShakeMagnitude);
-
-        //graphics 
-        Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.identity);
-        Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
-
 
         bulletsLeft--;
         bulletsShot--;

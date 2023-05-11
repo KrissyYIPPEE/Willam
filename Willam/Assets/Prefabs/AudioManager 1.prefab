@@ -45,7 +45,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Footsteps
-    clip: {fileID: 8300000, guid: a20b8b34edf650a41bf6f65c1f1b8c18, type: 3}
+  - name: KatanaSwing
+    clip: {fileID: 8300000, guid: eb241875207573c4996bb2470d2ba8ee, type: 3}
     volume: 1
     pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GunShot
+    clip: {fileID: 8300000, guid: 90c27ddc5a9915d4b98dab646781efe8, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Shuriken
+    clip: {fileID: 8300000, guid: f63b78f498ab9f449b86d59162d0f7de, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

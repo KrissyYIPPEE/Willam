@@ -34,6 +34,9 @@ public class PlayerCombat : MonoBehaviour
     {
         readyToSwing = false;
 
+        //Play audio
+        FindObjectOfType<AudioManager>().Play("KatanaSwing");
+
         //Play attack animation (when placeholder is removed check back on Brakeys tutorial)
 
 

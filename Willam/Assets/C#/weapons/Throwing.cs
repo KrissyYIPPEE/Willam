@@ -44,6 +44,9 @@ public class Throwing : MonoBehaviour
     {
         readyToThrow = false;
 
+        //Audio
+        FindObjectOfType<AudioManager>().Play("Shuriken");
+
         //instatiating the object
         GameObject projectile = Instantiate(objectThrowing, attackPoint.position, cam.rotation);
 
