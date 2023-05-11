@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     public KeyCode sprintKey = KeyCode.LeftShift;
 
     [Header("Ground Check")]
+    public GameObject player;
     public LayerMask whatIsGround;
     public bool grounded;
     public Transform orientation;
@@ -50,8 +52,7 @@ public class PlayerMovement : MonoBehaviour
         sprinting,
         wallrunning,
         dashing,
-        air,
-        nul
+        air
     }
 
     public bool dashing;
@@ -259,8 +260,6 @@ public class PlayerMovement : MonoBehaviour
         grounded = false;
 
         //jumping
-
-
         if (jumps > 0)
         {
             rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
