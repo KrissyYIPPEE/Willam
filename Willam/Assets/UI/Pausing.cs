@@ -13,7 +13,7 @@ public class Pausing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if(gameIsPaused)
             {
@@ -28,6 +28,7 @@ public class Pausing : MonoBehaviour
 
     public void Resume()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         pauseMenuUI.SetActive(false);
         fpsUI.SetActive(true);
         Time.timeScale = 1f;
@@ -36,6 +37,7 @@ public class Pausing : MonoBehaviour
 
     public void Pause()
     {
+        Cursor.lockState = CursorLockMode.None;
         pauseMenuUI.SetActive(true);
         fpsUI.SetActive(false);
         Time.timeScale = 0f;
