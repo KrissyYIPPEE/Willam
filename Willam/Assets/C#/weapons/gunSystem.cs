@@ -91,6 +91,10 @@ public class gunSystem : MonoBehaviour
 
     private void Reload()
     {
+        //Audio
+        FindObjectOfType<AudioManager>().Play("GunReload");
+
+        //Reload
         reloading = true;
         Invoke("ReloadFinished", reloadTime);
     }
