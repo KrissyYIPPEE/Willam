@@ -55,7 +55,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 9d8e8eac84452ff478f1a496311a511e, type: 3}
     volume: 0.5
     pitch: 1
-    loop: 1
+    loop: 0
     source: {fileID: 0}
   - name: Shuriken
     clip: {fileID: 8300000, guid: f63b78f498ab9f449b86d59162d0f7de, type: 3}
