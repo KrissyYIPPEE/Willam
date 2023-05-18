@@ -429,6 +429,7 @@ MonoBehaviour:
   dashUpwardForce: 0
   maxDashYSpeed: 15
   dashDuration: 0.25
+  resetTime: 0.5
   cam: {fileID: 4516790796936541570}
   dashFov: 95
   useCameraForward: 1
@@ -694,7 +695,7 @@ MonoBehaviour:
   timeBetweenShooting: 0.05
   spread: 0.02
   range: 100
-  reloadTime: 1
+  reloadTime: 3
   timeBetweenShots: 0
   magazineSize: 30
   bulletsPerTap: 1

@@ -16,6 +16,7 @@ public class Dashing : MonoBehaviour
     public float dashUpwardForce;
     public float maxDashYSpeed;
     public float dashDuration;
+    public float resetTime;
 
     [Header("CameraEffect")]
     public CameraMovement cam;
@@ -93,13 +94,19 @@ public class Dashing : MonoBehaviour
 
     private void ResetDash()
     {
-        pm.dashing = false;
         pm.maxYSpeed = 0;
 
         cam.DoFov(80f);
 
         if (disableGravity)
             rb.useGravity = true;
+
+        Invoke("ResetDashFinished", resetTime);
+    }
+
+    private void ResetDashFinished()
+    {
+        pm.dashing = false;
     }
 
     private Vector3 GetDirection(Transform forwardT)
