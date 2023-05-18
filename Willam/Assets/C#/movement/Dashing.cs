@@ -51,6 +51,9 @@ public class Dashing : MonoBehaviour
 
     private void Dash()
     {
+        //Audio
+        FindObjectOfType<AudioManager>().Play("Dash");
+
         if (dashCdTimer > 0) return;
         else dashCdTimer = dashCd;
 
