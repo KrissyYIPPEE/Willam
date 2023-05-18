@@ -575,7 +575,7 @@ MonoBehaviour:
     m_Bits: 512
   text: {fileID: 0}
   totalThrows: 1
-  throwCooldown: 0.1
+  throwCooldown: 0.5
   throwKey: 323
   throwForce: 30
   throwUpwardForce: 0
